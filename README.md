@@ -1,6 +1,6 @@
 # About
 
-This library provides the core components for the Jeography GIS
+This project provides the core components for the Jeography GIS
 library.
 
 # License
