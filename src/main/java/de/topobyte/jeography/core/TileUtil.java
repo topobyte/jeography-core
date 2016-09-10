@@ -17,6 +17,9 @@
 
 package de.topobyte.jeography.core;
 
+import com.google.common.base.Predicate;
+import com.google.common.collect.Iterables;
+
 import de.topobyte.adt.geo.BBox;
 import de.topobyte.geomath.WGS84;
 
@@ -79,6 +82,23 @@ public class TileUtil
 			return false;
 		}
 		return true;
+	}
+
+	/**
+	 * Create an {@link Iterable} that contains all {@link Tile}s that are valid
+	 * as of {@link #isValid(Tile)}.
+	 */
+	public static <T extends Tile> Iterable<T> valid(Iterable<T> iterable)
+	{
+		return Iterables.filter(iterable, new Predicate<T>() {
+
+			@Override
+			public boolean apply(T tile)
+			{
+				return TileUtil.isValid(tile);
+			}
+
+		});
 	}
 
 }
