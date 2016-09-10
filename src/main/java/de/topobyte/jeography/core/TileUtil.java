@@ -72,6 +72,14 @@ public class TileUtil
 		return new BBox(lon1, lat1, lon2, lat2);
 	}
 
+	/**
+	 * Check if a tile is valid, i.e. its coordinates are within the range
+	 * [0..2^zoom].
+	 * 
+	 * @param tile
+	 *            the tile to check
+	 * @return whether the specified tile is valid.
+	 */
 	public static boolean isValid(Tile tile)
 	{
 		int zoom = tile.getZoom();
