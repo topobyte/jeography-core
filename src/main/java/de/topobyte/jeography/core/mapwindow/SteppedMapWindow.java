@@ -27,9 +27,9 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import de.topboyte.interactiveview.ZoomChangedListener;
 import de.topobyte.adt.geo.BBox;
 import de.topobyte.geomath.WGS84;
+import de.topobyte.interactiveview.ZoomChangedListener;
 import de.topobyte.jeography.core.OverlayPoint;
 import de.topobyte.jeography.core.Tile;
 import de.topobyte.jeography.core.TileOnWindow;

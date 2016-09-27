@@ -19,8 +19,8 @@ package de.topobyte.jeography.core.mapwindow;
 
 import java.util.Collection;
 
-import de.topboyte.interactiveview.ZoomChangedListener;
 import de.topobyte.adt.geo.BBox;
+import de.topobyte.interactiveview.ZoomChangedListener;
 import de.topobyte.jeography.core.OverlayPoint;
 import de.topobyte.jgs.transform.CoordinateTransformer;
 
