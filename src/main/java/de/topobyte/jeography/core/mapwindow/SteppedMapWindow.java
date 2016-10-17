@@ -134,8 +134,8 @@ public class SteppedMapWindow implements TileMapWindow
 		double tileY1 = WGS84.lat2merc(bbox.getLat1(), 1 << zoom);
 		double tileX2 = WGS84.lon2merc(bbox.getLon2(), 1 << zoom);
 		double tileY2 = WGS84.lat2merc(bbox.getLat2(), 1 << zoom);
-		logger.debug(String.format("%f,%f %f,%f", tileX1, tileY1, tileX2,
-				tileY2));
+		logger.debug(
+				String.format("%f,%f %f,%f", tileX1, tileY1, tileX2, tileY2));
 		tx = (int) tileX1;
 		ty = (int) tileY1;
 		xoff = (int) Math.round((tileX1 - tx) * tileWidth);
@@ -822,7 +822,7 @@ public class SteppedMapWindow implements TileMapWindow
 	{
 		int thisX = tx * tileWidth + xoff;
 		int otherX = mapWindow.tx * tileWidth + mapWindow.xoff;
-		// logger.debug("this.x:  " + thisX);
+		// logger.debug("this.x: " + thisX);
 		// logger.debug("other.x: " + otherX);
 		return otherX - thisX;
 	}
@@ -838,7 +838,7 @@ public class SteppedMapWindow implements TileMapWindow
 	{
 		int thisY = ty * tileHeight + yoff;
 		int otherY = mapWindow.ty * tileHeight + mapWindow.yoff;
-		// logger.debug("this.y:  " + thisY);
+		// logger.debug("this.y: " + thisY);
 		// logger.debug("other.y: " + otherY);
 		return otherY - thisY;
 	}

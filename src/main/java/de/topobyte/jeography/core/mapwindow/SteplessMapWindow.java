@@ -139,8 +139,8 @@ public class SteplessMapWindow implements MapWindow
 		double tileY1 = WGS84.lat2merc(bbox.getLat1(), worldsize);
 		double tileX2 = WGS84.lon2merc(bbox.getLon2(), worldsize);
 		double tileY2 = WGS84.lat2merc(bbox.getLat2(), worldsize);
-		logger.debug(String.format("%f,%f %f,%f", tileX1, tileY1, tileX2,
-				tileY2));
+		logger.debug(
+				String.format("%f,%f %f,%f", tileX1, tileY1, tileX2, tileY2));
 
 		px = (int) Math.round(tileX1 * worldscale);
 		py = (int) Math.round(tileY1 * worldscale);

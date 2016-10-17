@@ -29,8 +29,8 @@ package de.topobyte.jeography.tiles.manager;
  * 
  * @author Sebastian Kuerten (sebastian@topobyte.de)
  */
-public interface PriorityImageManager<T, D, P extends Comparable<P>> extends
-		ImageManager<T, D>
+public interface PriorityImageManager<T, D, P extends Comparable<P>>
+		extends ImageManager<T, D>
 {
 
 	/**

@@ -49,7 +49,7 @@ public class BboxViewBounds implements ViewBounds
 			return BoundsInfo.LON_LAT_OUT_OF_BOUNDS;
 		} else if (!lonOk) {
 			return BoundsInfo.LON_OUT_OF_BOUNDS;
-		} else /* if (!latOk) */{
+		} else /* if (!latOk) */ {
 			return BoundsInfo.LAT_OUT_OF_BOUNDS;
 		}
 	}
