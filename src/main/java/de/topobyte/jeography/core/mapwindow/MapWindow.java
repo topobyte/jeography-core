@@ -49,7 +49,7 @@ public interface MapWindow extends CoordinateTransformer
 	public int getWorldScale();
 
 	/**
-	 * @return the size of the whole worlds image in pixels
+	 * @return the size of the whole world's image in pixels
 	 */
 	public double getWorldsizePixels();
 
