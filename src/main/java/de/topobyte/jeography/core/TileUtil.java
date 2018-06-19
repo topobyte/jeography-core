@@ -17,8 +17,8 @@
 
 package de.topobyte.jeography.core;
 
-import com.google.common.base.Predicate;
-import com.google.common.collect.Iterables;
+import java.util.ArrayList;
+import java.util.List;
 
 import de.topobyte.adt.geo.BBox;
 import de.topobyte.geomath.WGS84;
@@ -98,15 +98,13 @@ public class TileUtil
 	 */
 	public static <T extends Tile> Iterable<T> valid(Iterable<T> iterable)
 	{
-		return Iterables.filter(iterable, new Predicate<T>() {
-
-			@Override
-			public boolean apply(T tile)
-			{
-				return TileUtil.isValid(tile);
+		List<T> results = new ArrayList<>();
+		for (T tile : iterable) {
+			if (isValid(tile)) {
+				results.add(tile);
 			}
-
-		});
+		}
+		return results;
 	}
 
 }
