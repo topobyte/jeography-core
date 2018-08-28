@@ -2,7 +2,7 @@ wrapper {
     gradleVersion = '4.9'
 }
 
-apply plugin: 'java'
+apply plugin: 'java-library'
 apply plugin: 'eclipse'
 apply plugin: 'maven'
 
@@ -11,7 +11,7 @@ version = pVersion
 
 if (project.hasProperty("topobyte")) {
     apply from: 'file:///' + System.getProperty("user.home") \
-        + '/.gradle/topobyte.gradle'
+        + '/.gradle/topobyte7.gradle'
 }
 
 repositories {
@@ -21,13 +21,16 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    compile 'de.topobyte:adt-geo:0.0.4'
-    compile 'de.topobyte:geomath:0.0.2'
-    compile 'de.topobyte:jgs:0.0.1'
-    compile 'de.topobyte:interactive-view:0.0.2'
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 
-    compile 'org.slf4j:slf4j-api:1.6.1'
+dependencies {
+    api 'de.topobyte:adt-geo:0.0.4'
+    api 'de.topobyte:geomath:0.0.2'
+    api 'de.topobyte:jgs:0.0.1'
+    api 'de.topobyte:interactive-view:0.0.2'
+
+    api 'org.slf4j:slf4j-api:1.6.1'
 
     testRuntime 'org.slf4j:slf4j-log4j12:1.6.1'
     testRuntime 'log4j:log4j:1.2.16'
